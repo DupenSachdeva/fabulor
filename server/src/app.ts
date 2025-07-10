@@ -8,7 +8,7 @@ async function main() {
   const app = _api(express());
 
   app.get("/", (req, res) => {
-    return res.send("Server is live at 2700");
+    return res.send("Server is live at 80");
   });
 
   const server = http.createServer(app);
