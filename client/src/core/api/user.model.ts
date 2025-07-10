@@ -29,7 +29,7 @@ class UserModel {
     user: AuthenticateUser
   ): Promise<LoggedUser & { isLoggedIn: boolean }> => {
     const data = (await axios.post(this.base_url + "/login", user))
-      .data as LoggedUser;
+      .data as LoggedUser;``
 
     window.localStorage.setItem("token", data.token);
 

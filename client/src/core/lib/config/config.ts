@@ -1,5 +1,5 @@
 export const configurations = {
   server: {
-    http_url: "http://localhost:2700",
+    http_url: "http://3.110.218.128:3000",
   },
 };
