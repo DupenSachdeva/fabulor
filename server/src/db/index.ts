@@ -2,7 +2,6 @@ import { Client } from "pg";
 import { env } from "../core/config/env";
 import { drizzle } from "drizzle-orm/node-postgres";
 import * as schema from "./schema";
-import { readFileSync } from "fs";
 
 let client: Client =
   env.node_env === "prod"
@@ -10,7 +9,6 @@ let client: Client =
         connectionString: env.db_url,
         ssl: {
           rejectUnauthorized: false,
-          ca: readFileSync("src/ca.pem").toString(),
         },
       })
     : new Client({

@@ -4,10 +4,10 @@ import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { extname } from "path";
 import { lookup } from "mime-types";
 class S3Service {
-  private bucket_name = "manthan-bucket-1";
+  private bucket_name = "dupenbucket2";
   private access_key_id = env.S3_ACCESS_KEY;
   private secret_access_key = env.S3_SECRET_ACCESS_KEY;
-  private base_path = "synapse-storage";
+  private base_path = "fabulorbucket";
   private bucket_region = "ap-south-1";
   private cloud_front_domain = env.CLOUD_FRONT_DOMAIN;
 

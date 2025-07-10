@@ -2,18 +2,16 @@ import { Client } from "pg";
 import { env } from "../core/config/env";
 import { drizzle } from "drizzle-orm/node-postgres";
 import { migrate } from "drizzle-orm/node-postgres/migrator";
-import { readFileSync } from "fs";
 
 async function migrate_database() {
   let migrationClient: Client;
+
   if (env.node_env === "prod") {
     migrationClient = new Client({
       connectionString: env.db_url,
       ssl: {
-        rejectUnauthorized: false,
-        ca: readFileSync("src/ca.pem").toString(),
-      },
-    });
+        rejectUnauthorized: false
+    }});
   } else {
     migrationClient = new Client({
       connectionString: env.db_url,

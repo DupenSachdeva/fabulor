@@ -63,7 +63,7 @@ export const config = {
       listenIps: [
         {
           ip: "0.0.0.0",
-          announcedIp: getLocalIPv4Address()!, // replace by public IP address
+          announcedIp: "127.0.0.1"!, // replace by public IP address
         },
       ],
       maxIncomingBitrate: 1500000,

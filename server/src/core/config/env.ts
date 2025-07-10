@@ -7,7 +7,7 @@ export const env = {
   password: process.env.DB_PASSWORD!,
   database: process.env.DB_NAME!,
   db_url: process.env.DB_URL!,
-  node_env: process.env.NODE_ENV! as "dev" | "prod",
+  node_env: process.env.NODE_ENV!,
   port: Number(process.env.PORT!) || 2800,
   JWT_SECRET: process.env.JWT_SECRET!,
   REDIS_URL: process.env.REDIS_URL!,

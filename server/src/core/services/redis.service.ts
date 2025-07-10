@@ -4,11 +4,18 @@ import { SelectChat } from "../../db";
 import { RoomChats } from "../lib/types/global.type";
 
 class RedisService {
+
   private redis: Redis;
 
   constructor() {
-    this.redis = new Redis(env.REDIS_URL);
-  }
+  this.redis = new Redis(env.REDIS_URL);
+  console.log("Redis URL:", env.REDIS_URL);
+
+  this.redis.on('error', (err) => {
+    console.error('❌ Redis connection error:', err);
+  });
+}
+
 
   async update_room_chats(input: { chat: RoomChats; roomId: string }) {
     const chat_key = this.room_chat_key(input.roomId);
