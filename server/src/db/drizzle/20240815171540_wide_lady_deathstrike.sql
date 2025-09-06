@@ -1,1 +1,0 @@
-ALTER TABLE "user_room" ALTER COLUMN "joined_at" SET DEFAULT now();

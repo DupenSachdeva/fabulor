@@ -1,1 +1,0 @@
-ALTER TABLE "rooms" ALTER COLUMN "name" DROP NOT NULL;

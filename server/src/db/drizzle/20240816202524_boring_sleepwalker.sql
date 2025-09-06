@@ -1,1 +1,0 @@
-ALTER TABLE "group_invites" ADD COLUMN "status" varchar DEFAULT 'pending' NOT NULL;

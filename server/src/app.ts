@@ -14,9 +14,7 @@ async function main() {
   const server = http.createServer(app);
   new SocketService(server);
 
-  // (async () => {
-  //   await createWorkers();
-  // })();
+
 
   server.listen(env.port, () => {
     console.log(`Server is running live on ${env.port}`);
