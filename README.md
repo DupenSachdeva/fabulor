@@ -13,7 +13,6 @@ Synapse is built using the following technologies:
 - **Server**:
   - **Node.js** with **Express**: For the backend API.
   - **Socket.IO**: For real-time communication.
-  - **Mediasoup**: SFU for audio and video conferencing.
   - **Drizzle ORM** with **Postgres**: For database management.
   - **Amazon S3**: For file uploads and storage.
   - **Redis**: For caching and real-time features.
