@@ -142,6 +142,7 @@ class UserController {
         userId,
         fileName,
       });
+      
       console.log(data);
 
       return res.json(data);
